@@ -1,6 +1,6 @@
 package algorithms.add_two_numbers;
 
-public class ListSolution implements Solution{
+public class ListSolution implements Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(0);
         ListNode temp = result;

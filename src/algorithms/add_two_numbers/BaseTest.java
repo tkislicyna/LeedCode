@@ -1,11 +1,10 @@
 package algorithms.add_two_numbers;
 
 import org.junit.Test;
-
 import static junit.framework.TestCase.assertEquals;
 
-public class SolutionTest {
-    private  Solution solution = new ListSolution();
+abstract public class BaseTest {
+    protected Solution solution;
 
     @Test
     public void addTwoNumbers() {
