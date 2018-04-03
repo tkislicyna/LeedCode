@@ -2,12 +2,10 @@ package algorithms.add_two_numbers;
 
 import org.junit.Test;
 
-import java.util.List;
-
 import static junit.framework.TestCase.assertEquals;
 
-public class BigIntegerSolutionTest {
-    private  Solution solution = new BigIntegerSolution();
+public class SolutionTest {
+    private  Solution solution = new ListSolution();
 
     @Test
     public void addTwoNumbers() {
