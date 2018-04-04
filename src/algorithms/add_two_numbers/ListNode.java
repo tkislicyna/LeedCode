@@ -1,5 +1,4 @@
 package algorithms.add_two_numbers;
-import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 
 /**
  * Definition in leedcode.com  for singly-linked list.
@@ -23,7 +22,7 @@ public class ListNode {
     }
 
     public static ListNode valueOf(String s){
-        if (s == null || s.equals(""))
+        if (s == null || s.isEmpty())
             return null;
         s = s.trim().replaceFirst(",","");
         ListNode node = new ListNode(Character.getNumericValue((s.charAt(0))));
