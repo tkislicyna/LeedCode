@@ -1,7 +1,10 @@
 package algorithms.add_two_numbers;
 
 public class ListSolutionTest extends BaseTest{
-    public ListSolutionTest(){
-        solution = new ListSolution();
+    private Solution solution = new ListSolution();
+
+    @Override
+    public Solution getSolution() {
+        return solution;
     }
 }

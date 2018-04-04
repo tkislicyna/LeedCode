@@ -1,7 +1,10 @@
 package algorithms.add_two_numbers;
 
 public class BigIntegerSolutionTest extends BaseTest {
-    public BigIntegerSolutionTest() {
-        solution = new BigIntegerSolution();
+    private Solution solution = new BigIntegerSolution();
+
+    @Override
+    public Solution getSolution() {
+        return solution;
     }
 }

@@ -4,14 +4,14 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
 abstract public class BaseTest {
-    protected Solution solution;
+    public abstract Solution getSolution();
 
     @Test
     public void addTwoNumbers() {
         ListNode first = ListNode.valueOf("243");
         ListNode second = ListNode.valueOf("564");
 
-        ListNode result = solution.addTwoNumbers(first, second);
+        ListNode result = getSolution().addTwoNumbers(first, second);
         assertEquals("failure - strings are not equal", result.toString(), "7,0,8");
     }
 
@@ -20,7 +20,7 @@ abstract public class BaseTest {
         ListNode first = ListNode.valueOf("0");
         ListNode second = ListNode.valueOf("564");
 
-        ListNode result = solution.addTwoNumbers(first, second);
+        ListNode result = getSolution().addTwoNumbers(first, second);
         assertEquals("failure - strings are not equal", result.toString(), "5,6,4");
     }
 
@@ -29,7 +29,7 @@ abstract public class BaseTest {
         ListNode first = ListNode.valueOf("243");
         ListNode second = ListNode.valueOf("0");
 
-        ListNode result = solution.addTwoNumbers(first, second);
+        ListNode result = getSolution().addTwoNumbers(first, second);
         assertEquals("failure - strings are not equal", result.toString(), "2,4,3");
     }
 
@@ -38,7 +38,7 @@ abstract public class BaseTest {
         ListNode first = ListNode.valueOf("9");
         ListNode second = ListNode.valueOf("1999999999");
 
-        ListNode result = solution.addTwoNumbers(first, second);
+        ListNode result = getSolution().addTwoNumbers(first, second);
         assertEquals("failure - strings are not equal", result.toString(), "0,0,0,0,0,0,0,0,0,0,1");
     }
 
@@ -47,7 +47,7 @@ abstract public class BaseTest {
         ListNode first = ListNode.valueOf("1");
         ListNode second = ListNode.valueOf("99");
 
-        ListNode result = solution.addTwoNumbers(first, second);
+        ListNode result = getSolution().addTwoNumbers(first, second);
         assertEquals("failure - strings are not equal", result.toString(), "0,0,1");
     }
 
@@ -56,7 +56,7 @@ abstract public class BaseTest {
         ListNode first = ListNode.valueOf("0");
         ListNode second = ListNode.valueOf("0");
 
-        ListNode result = solution.addTwoNumbers(first, second);
+        ListNode result = getSolution().addTwoNumbers(first, second);
         assertEquals("failure - strings are not equal", result.toString(), "0");
     }
 }
