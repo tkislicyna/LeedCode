@@ -1,33 +1,35 @@
 package algorithms.longest_substring_without_repeating_characters;
+
 import org.junit.Test;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class SolutionTest {
-    @Test
-    public void lengthOfLongestSubstring1(){
-        Solution solution = new Solution();
-        int result = solution.lengthOfLongestSubstring("abcabcbb");
-        assertEquals("failure - ints are not equal", result,3);
+    public Solution getSolution() {
+        return new Solution();
     }
 
     @Test
-    public void lengthOfLongestSubstring2(){
-        Solution solution = new Solution();
-        int result = solution.lengthOfLongestSubstring("bbbbbb");
-        assertEquals("failure - ints are not equal", result,1);
+    public void lengthOfLongestSubstring1() {
+        int result = getSolution().lengthOfLongestSubstring("abcabcbb");
+        assertEquals("failure - ints are not equal", result, 3);
     }
 
     @Test
-    public void emptyString(){
-        Solution solution = new Solution();
-        int result = solution.lengthOfLongestSubstring("");
-        assertEquals("failure - ints are not equal", result,0);
+    public void lengthOfLongestSubstring2() {
+        int result = getSolution().lengthOfLongestSubstring("bbbbbb");
+        assertEquals("failure - ints are not equal", result, 1);
     }
 
     @Test
-    public void lengthOfLongestSubstring4(){
-        Solution solution = new Solution();
-        int result = solution.lengthOfLongestSubstring("abcd");
-        assertEquals("failure - ints are not equal", result,4);
+    public void emptyString() {
+        int result = getSolution().lengthOfLongestSubstring("");
+        assertEquals("failure - ints are not equal", result, 0);
+    }
+
+    @Test
+    public void lengthOfLongestSubstring4() {
+        int result = getSolution().lengthOfLongestSubstring("abcd");
+        assertEquals("failure - ints are not equal", result, 4);
     }
 }
